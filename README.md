@@ -1,6 +1,8 @@
-# Wokwi project
+# ODD\EVEN Game
 
-This is a Wokwi project. Please edit this README file and add a description of your project.
+This is a odd\even game made using an arduinon UNO
+It contains an IR sensor which detects the player motion and based on that any servo out of 5 randomly moves.
+If you have same type of number that is ODD or EVEN you win,depending on the number type you choose.
 
 ## Usage
 
