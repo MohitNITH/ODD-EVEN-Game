@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 217.8, "left": -112.4, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": -155.6, "left": 67.2, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo2", "top": -222.8, "left": 211.2, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo3", "top": -40.4, "left": 355.2, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo4", "top": 84.4, "left": 345.6, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo5", "top": 209.2, "left": 336, "attrs": {} },
+    { "type": "wokwi-ir-receiver", "id": "ir1", "top": 257.85, "left": -1.78, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:GND.2", "bb1:tp.23", "black", [ "v0" ] ],
+    [ "servo1:GND", "bb1:tp.2", "black", [ "h0" ] ],
+    [ "servo5:GND", "bb1:tp.25", "black", [ "h-96", "v-28.8" ] ],
+    [ "servo4:GND", "bb1:tp.3", "black", [ "h-28.8", "v-144", "h-364.8" ] ],
+    [ "servo3:GND", "bb1:tp.5", "black", [ "h-28.8", "v-38.4", "h-364.8", "v9.6" ] ],
+    [ "servo2:GND", "bb1:tp.4", "black", [ "h0" ] ],
+    [ "uno:5V", "bb1:tn.22", "red", [ "v0" ] ],
+    [ "servo5:V+", "bb1:tn.20", "green", [ "h0" ] ],
+    [ "servo4:V+", "bb1:tn.19", "green", [ "h-67.2", "v297.7", "h-172.8" ] ],
+    [ "servo3:V+", "bb1:tn.7", "green", [ "h-76.8", "v-57.5", "h-288" ] ],
+    [ "servo1:V+", "bb1:tn.6", "green", [ "h-86.4", "v336.1" ] ],
+    [ "servo2:V+", "bb1:tn.1", "green", [ "h0" ] ],
+    [ "servo1:PWM", "uno:3", "blue", [ "h-19.2", "v29", "h182.4" ] ],
+    [ "servo2:PWM", "uno:5", "blue", [ "h-172.8", "v105.8", "h163.2" ] ],
+    [ "servo3:PWM", "uno:6", "blue", [ "h-67.2", "v-67", "h-96" ] ],
+    [ "servo4:PWM", "uno:9", "blue", [ "h-38.4", "v-172.6", "h-144" ] ],
+    [ "servo5:PWM", "uno:10", "blue", [ "h-28.8", "v-307", "h-153.6" ] ],
+    [ "ir1:GND", "bb1:12b.g", "", [ "$bb" ] ],
+    [ "ir1:VCC", "bb1:13b.g", "", [ "$bb" ] ],
+    [ "ir1:DAT", "bb1:14b.g", "", [ "$bb" ] ],
+    [ "bb1:12b.h", "bb1:tp.15", "black", [ "v86.4", "h57.6" ] ],
+    [ "bb1:13b.h", "bb1:tn.14", "green", [ "v96", "h28.8" ] ],
+    [ "bb1:14b.h", "uno:2", "red", [ "v-9.6", "h499.2", "v-403.2", "h-297.6" ] ]
+  ],
+  "dependencies": {}
+}
